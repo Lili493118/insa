@@ -25,7 +25,25 @@ class Poneys
      */
     public function removePoneyFromField(int $number): void
     {
-        $this->count -= $number;
+        if($this->count-$number <0){
+            throw new Exception('Nombre de poney negatif');
+        }
+        else{
+          $this->count -= $number;  
+        }
+        
+    }
+
+    /**
+     * Ajout un poney du champ
+     *
+     * @param int $number Nombre de poneys à ajouter
+     *
+     * @return void
+     */
+    public function addPoneyFromField(int $number): void
+    {
+        $this->count += $number;
     }
 
     /**

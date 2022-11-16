@@ -23,6 +23,57 @@ class PoneysTest extends TestCase
 
         // Assert
         $this->assertEquals(5, $poneys->getCount());
+
+        // Assert 
+        $this->expectException(Exception::class);
+
+        //Action
+        $poneys->removePoneyFromField(9);
+ 
+    }
+
+    public function PoneyProvider(){
+        return [
+            [2,6],
+            [8,0],
+            [4,4]
+        ];
+    }
+
+/**
+     * Undocumented function
+     *
+     * @dataProvider PoneyProvider
+     */
+    
+    public function testRemovePoneyFromFieldPoneyProvider($a,$b)
+    {
+        // Setup
+        $poneys = new Poneys();
+
+        // Action
+        $poneys->removePoneyFromField($a);
+
+        // Assert
+        $this->assertEquals($b, $poneys->getCount());
+ 
+    }
+
+    /**
+     * Undocumented function
+     *
+     * @return void
+     */
+    public function testAddPoneyFromField()
+    {
+        // Setup
+        $poneys = new Poneys();
+
+        // Action
+        $poneys->addPoneyFromField(3);
+
+        // Assert
+        $this->assertEquals(11, $poneys->getCount());
     }
 }
 ?>
