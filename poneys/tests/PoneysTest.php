@@ -8,6 +8,11 @@ require_once 'src/Poneys.php';
  */
 class PoneysTest extends TestCase
 {
+
+    public function setUp() : void{
+        $this->poneys = new Poneys();
+        $this->poneys->setCount(8);
+    }
     /**
      * Undocumented function
      *
@@ -15,20 +20,19 @@ class PoneysTest extends TestCase
      */
     public function testRemovePoneyFromField()
     {
-        // Setup
-        $poneys = new Poneys();
+        
 
         // Action
-        $poneys->removePoneyFromField(3);
+        $this->poneys->removePoneyFromField(3);
 
         // Assert
-        $this->assertEquals(5, $poneys->getCount());
+        $this->assertEquals(5, $this->poneys->getCount());
 
         // Assert 
         $this->expectException(Exception::class);
 
         //Action
-        $poneys->removePoneyFromField(9);
+        $this->poneys->removePoneyFromField(9);
  
     }
 
@@ -48,14 +52,13 @@ class PoneysTest extends TestCase
     
     public function testRemovePoneyFromFieldPoneyProvider($a,$b)
     {
-        // Setup
-        $poneys = new Poneys();
+        
 
         // Action
-        $poneys->removePoneyFromField($a);
+        $this->poneys->removePoneyFromField($a);
 
         // Assert
-        $this->assertEquals($b, $poneys->getCount());
+        $this->assertEquals($b, $this->poneys->getCount());
  
     }
 
@@ -66,14 +69,41 @@ class PoneysTest extends TestCase
      */
     public function testAddPoneyFromField()
     {
-        // Setup
-        $poneys = new Poneys();
+   
 
         // Action
-        $poneys->addPoneyFromField(3);
+        $this->poneys->addPoneyFromField(3);
 
         // Assert
-        $this->assertEquals(11, $poneys->getCount());
+        $this->assertEquals(11, $this->poneys->getCount());
     }
+
+    public function testPlaceDispo()
+    {
+        
+        
+
+        // Action
+        $this->poneys->addPoneyFromField(8);
+
+        // Assert
+        $this->assertFalse($this->poneys->PlaceDispo());
+    }
+
+     /* public function testMock(){
+        $this->poneys = new Poneys();
+        $stub=$this->createMock(Poneys::class);
+        $stub->method("getNames")
+        ->will($this->returnValue(["eclair"]));
+
+        $this->assertSame(["eclair"], $this->poneys->getNames());
+    }  */
+    public function tearDown() : void{
+        unset($this->poneys );
+        
+    }
+    
+    
+
 }
 ?>

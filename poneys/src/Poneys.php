@@ -16,6 +16,16 @@ class Poneys
         return $this->count;
     }
 
+     /**
+     * set le nombre de poneys
+     *
+     * @return void
+     */
+    public function setCount($number): void
+    {
+        $this->count=$number;
+    }
+
     /**
      * Retire un poney du champ
      *
@@ -53,7 +63,17 @@ class Poneys
      */
     public function getNames(): array
     {
+        return [];
+    }
 
+    /**
+     * Verifie s'il reste de la place dans le champ
+     *
+     * @return bool
+     */
+    public function PlaceDispo(): bool
+    {
+        return $this->count <15;
     }
 }
 ?>
