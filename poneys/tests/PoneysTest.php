@@ -69,8 +69,6 @@ class PoneysTest extends TestCase
      */
     public function testAddPoneyFromField()
     {
-   
-
         // Action
         $this->poneys->addPoneyFromField(3);
 
@@ -80,9 +78,6 @@ class PoneysTest extends TestCase
 
     public function testPlaceDispo()
     {
-        
-        
-
         // Action
         $this->poneys->addPoneyFromField(8);
 
@@ -90,14 +85,15 @@ class PoneysTest extends TestCase
         $this->assertFalse($this->poneys->PlaceDispo());
     }
 
-     /* public function testMock(){
-        $this->poneys = new Poneys();
+     public function testMock(){
         $stub=$this->createMock(Poneys::class);
         $stub->method("getNames")
-        ->will($this->returnValue(["eclair"]));
+        ->will($this->returnValue(["nom"]));
 
-        $this->assertSame(["eclair"], $this->poneys->getNames());
-    }  */
+        $this->assertEquals(["nom"], $stub->getNames());
+    }  
+
+
     public function tearDown() : void{
         unset($this->poneys );
         
