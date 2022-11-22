@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="" tests="8" assertions="10" errors="0" warnings="0" failures="0" skipped="0" time="0.005350">
+    <testsuite name="Poney Test suite" tests="7" assertions="8" errors="0" warnings="0" failures="0" skipped="0" time="0.005308">
+      <testsuite name="PoneysTest" file="/home/user/Documents/test/insa/poneys/tests/PoneysTest.php" tests="7" assertions="8" errors="0" warnings="0" failures="0" skipped="0" time="0.005308">
+        <testcase name="testRemovePoneyFromField" class="PoneysTest" classname="PoneysTest" file="/home/user/Documents/test/insa/poneys/tests/PoneysTest.php" line="21" assertions="2" time="0.001655"/>
+        <testsuite name="PoneysTest::testRemovePoneyFromFieldPoneyProvider" tests="3" assertions="3" errors="0" warnings="0" failures="0" skipped="0" time="0.000069">
+          <testcase name="testRemovePoneyFromFieldPoneyProvider with data set #0" class="PoneysTest" classname="PoneysTest" file="/home/user/Documents/test/insa/poneys/tests/PoneysTest.php" line="53" assertions="1" time="0.000037"/>
+          <testcase name="testRemovePoneyFromFieldPoneyProvider with data set #1" class="PoneysTest" classname="PoneysTest" file="/home/user/Documents/test/insa/poneys/tests/PoneysTest.php" line="53" assertions="1" time="0.000018"/>
+          <testcase name="testRemovePoneyFromFieldPoneyProvider with data set #2" class="PoneysTest" classname="PoneysTest" file="/home/user/Documents/test/insa/poneys/tests/PoneysTest.php" line="53" assertions="1" time="0.000014"/>
+        </testsuite>
+        <testcase name="testAddPoneyFromField" class="PoneysTest" classname="PoneysTest" file="/home/user/Documents/test/insa/poneys/tests/PoneysTest.php" line="70" assertions="1" time="0.000027"/>
+        <testcase name="testPlaceDispo" class="PoneysTest" classname="PoneysTest" file="/home/user/Documents/test/insa/poneys/tests/PoneysTest.php" line="79" assertions="1" time="0.000064"/>
+        <testcase name="testMock" class="PoneysTest" classname="PoneysTest" file="/home/user/Documents/test/insa/poneys/tests/PoneysTest.php" line="88" assertions="1" time="0.003493"/>
+      </testsuite>
+    </testsuite>
+    <testsuite name="Poney 2" tests="1" assertions="2" errors="0" warnings="0" failures="0" skipped="0" time="0.000042">
+      <testsuite name="PoneyTest2" file="/home/user/Documents/test/insa/poneys/tests/PoneyTest2.php" tests="1" assertions="2" errors="0" warnings="0" failures="0" skipped="0" time="0.000042">
+        <testcase name="testRemovePoneyFromField" class="PoneyTest2" classname="PoneyTest2" file="/home/user/Documents/test/insa/poneys/tests/PoneyTest2.php" line="21" assertions="2" time="0.000042"/>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testsuites>

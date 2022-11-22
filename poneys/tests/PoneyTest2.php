@@ -6,7 +6,7 @@ require_once 'src/Poneys.php';
 /**
  * Classe de test de gestion de poneys
  */
-class PoneysTest extends TestCase
+class PoneyTest2 extends TestCase
 {
 
     public function setUp() : void{
